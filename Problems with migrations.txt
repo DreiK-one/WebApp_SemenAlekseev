@@ -1,0 +1,8 @@
+dotnet tool install --global dotnet-ef 
+     	Install tools.
+
+dotnet ef migrations add _initial
+	Add migration
+
+dotnet ef database update
+	Apply migration
