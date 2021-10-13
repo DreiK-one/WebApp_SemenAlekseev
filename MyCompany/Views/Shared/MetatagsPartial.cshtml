@@ -1,0 +1,21 @@
+﻿@using MyCompany.Service
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+@if (ViewBag.Title == null)
+{
+    <title>@Config.CompanyName</title>
+
+}
+else
+{
+    <title>@ViewBag.Title</title>
+}
+
+@if (ViewBag.Description != null)
+{
+    <meta name="description" content="@ViewBag.Description" />
+}
+@if (ViewBag.KeyWords != null)
+{
+    <meta name="keywords" content="@ViewBag.Keywords" />
+}
