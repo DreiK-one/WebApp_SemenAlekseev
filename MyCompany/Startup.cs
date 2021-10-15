@@ -57,7 +57,10 @@ namespace MyCompany
                 x.AddPolicy("AdminArea", policy => { policy.RequireRole("admin"); });
             });
 
-            services.AddControllersWithViews()
+            services.AddControllersWithViews(x =>
+            {
+                x.Conventions.Add(new AdminAreaAuthorization("Admin", "AdminArea"));
+            })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
                 .AddSessionStateTempDataProvider();
         }
